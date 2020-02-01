@@ -1,0 +1,194 @@
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap");
+canvas {
+    display:block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  display: flex;
+    position: absolute;
+    top: -100px;
+    left: 0;
+  justify-content: center;
+  align-items: center;
+}
+.container .box {
+  width: 400px;
+  height: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .box .title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.container .box .title .block {
+  width: 0%;
+  height: inherit;
+  background: #ffb510;
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
+.container .box .title h1 {
+  font-family: 'Poppins';
+  color: white;
+  font-size: 43px;
+    text-shadow: 2px 2px black;
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.container .box .title h1 span {
+  width: 0px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffb510;
+  -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  margin-left: 5px;
+  margin-top: -10px;
+  position: absolute;
+  bottom: 13px;
+  right: -12px;
+}
+.container .box .role {
+  width: 100%;
+    text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-top: 4px;
+}
+.container .box .role .block {
+  width: 0%;
+  height: inherit;
+  background: #e91e63;
+  position: absolute;
+  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  display: inline-flex;
+}
+.container .box .role p {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 3.2s;
+  opacity: 0;
+  font-weight: 900;
+    text-shadow: 2px 1px black;
+  font-family: 'Lato';
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #e9d856;
+    border: 0px solid #000;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #e9d856;
+    opacity: 0.8;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #e9d856;
+    border: 0px solid #000;
+    bottom: 13px;
+  }
+}
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes top {
+  0% {
+    opacity: 0;
+    bottom: -80px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
