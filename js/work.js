@@ -4,7 +4,6 @@ let inProgress = false;
 const goToSlide = (slideElements, index) => {
   if (!inProgress) {
     inProgress = true;
-
     $('.active').addClass('exit');
     $('.active').removeClass('active');
     slideElements.forEach(elem => {
