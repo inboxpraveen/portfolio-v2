@@ -39,7 +39,7 @@ function setup() {
 function reset() {
   w = canvas.width = window.innerWidth;
   h = canvas.height = window.innerHeight;
-  ctx.fillStyle = "grey";
+  ctx.fillStyle = "#4D4D4D";
   setupHexagons();
 }
 function setupHexagons() {
