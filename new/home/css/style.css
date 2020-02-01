@@ -284,7 +284,7 @@ ul {
     left: 50%;
   transform:translate(-50%, -50%);
   display:inline-block;
-  margin-top:17vh;
+  margin-top:20vh;
   padding:10px;
 }
 
@@ -379,14 +379,23 @@ ul li:hover:nth-child(2) a:before{
 ul li:hover:nth-child(2) a:after{
   background: #1E1E1E;
 }
-
 ul li:hover:nth-child(3) a{
-  background: grey;
+  background: #00aced;
 }
 ul li:hover:nth-child(3) a:before{
-  background: grey;
+  background: #097aa5;
 }
 ul li:hover:nth-child(3) a:after{
+  background: #53b9e0;
+}
+
+ul li:hover:nth-child(4) a{
+  background: grey;
+}
+ul li:hover:nth-child(4) a:before{
+  background: grey;
+}
+ul li:hover:nth-child(4) a:after{
   background: grey;
 }
 
