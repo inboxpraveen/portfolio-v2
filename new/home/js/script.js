@@ -44,7 +44,7 @@ function reset() {
 }
 function setupHexagons() {
   hexagons = [];
-  let r = 50;
+  let r = 200;
   let R = r / Math.cos(Math.PI / 6);
   let t = r * 2 / Math.sqrt(3);
   let rows = w / (r * 2) + 1;
