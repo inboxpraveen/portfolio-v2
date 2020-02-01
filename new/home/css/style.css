@@ -200,7 +200,7 @@ canvas {
     display: inline-block;
 }
 .links a{
-    width: 16vh;
+    min-width: 9vh;
     background: #00A4E4;
     margin: 2%;
     color: white;
