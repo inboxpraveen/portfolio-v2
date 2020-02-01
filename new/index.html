@@ -8,7 +8,7 @@
 
     </head>
     <body>
-        <button class="button" type="button" id="button_check" onClick="location.href='javascript:delay()'">
+        <button class="button" type="button" id="button_check">
             <span class="print print--under">
                 <svg viewBox="0 0 98 109" xmlns="http://www.w3.org/2000/svg">
                     <path d="m95.42 60.221c0.33333-4.6667 0.33333-10.667 0-18-0.5-11-8.5-26.5-24-34.5-15.5-8-38-9.5-55.5 8-11.667 11.667-16 25.5-13 41.5l0.65525 4.3683c0.38693 2.5791 2.7914 4.3563 5.3705 3.9695 2.5664-0.38496 4.3413-2.7687 3.9742-5.3378-1-7-6-22 10-38 14.554-14.554 38.15-14.554 52.704 0 4.5444 4.5444 7.8364 10.187 9.5562 16.379 0.5744 2.0681 0.98766 3.9417 1.2398 5.6209 2.4899 16.582-2.9979 37.051-6 53" pathLength="1"/>
@@ -30,9 +30,71 @@
         </button>
         
         <script>
+//            document.addEventListener('long-press', function(e) {
+//              e.target.setAttribute('data-editing', 'true');
+//            });
+//
             function delay() {
-                setTimeout( function() { window.location = 'https://inboxpraveen.github.io' }, 500 );
+                setTimeout( function() { window.location = 'https://inboxpraveen.github.io' }, 10 );
             }
+            
+            var node = document.getElementById("button_check");
+var longpress = false;
+var presstimer = null;
+var longtarget = null;
+
+var cancel = function(e) {
+    if (presstimer !== null) {
+        clearTimeout(presstimer);
+        presstimer = null;
+    }
+
+    this.classList.remove("longpress");
+};
+
+var click = function(e) {
+    if (presstimer !== null) {
+        clearTimeout(presstimer);
+        presstimer = null;
+    }
+
+    this.classList.remove("longpress");
+
+    if (longpress) {
+        return false;
+    }
+
+    alert("press");
+};
+
+var start = function(e) {
+    console.log(e);
+
+    if (e.type === "click" && e.button !== 0) {
+        return;
+    }
+
+    longpress = false;
+
+    this.classList.add("longpress");
+
+    if (presstimer === null) {
+        presstimer = setTimeout(function() {
+            delay();
+            longpress = true;
+        }, 1000);
+    }
+
+    return false;
+};
+
+node.addEventListener("mousedown", start);
+node.addEventListener("touchstart", start);
+node.addEventListener("click", click);
+node.addEventListener("mouseout", cancel);
+node.addEventListener("touchend", cancel);
+node.addEventListener("touchleave", cancel);
+node.addEventListener("touchcancel", cancel);
         </script>
     </body>
 </html>
