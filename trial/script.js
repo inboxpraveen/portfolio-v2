@@ -14,7 +14,6 @@ const goToSlide = (slideElements, index) => {
     const evenSlide = index % 2 === 0;
     if (evenSlide)
     $('.content__ping').addClass('content__ping--right');else
-
     $('.content__ping').removeClass('content__ping--right');
     $('.content__ping--noanimation').removeClass('content__ping--noanimation');
 
@@ -28,6 +27,6 @@ $('.content__slide:nth-child(2) .button_prev').on('click', () => goToSlide(slide
 $('.content__slide:nth-child(2) .button_next').on('click', () => goToSlide(slideElements, 3));
 $('.content__slide:nth-child(3) .button').on('click', () => goToSlide(slideElements, 2));
 
-setTimeout(() => goToSlide(slideElements, 2), 5000);
-setTimeout(() => goToSlide(slideElements, 1), 5000);
-setTimeout(() => goToSlide(slideElements, 3), 5000);
+setTimeout(() => goToSlide(slideElements, 2), 10000);
+setTimeout(() => goToSlide(slideElements, 1), 10000);
+setTimeout(() => goToSlide(slideElements, 3), 10000);
