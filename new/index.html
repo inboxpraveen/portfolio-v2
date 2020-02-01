@@ -30,71 +30,55 @@
         </button>
         
         <script>
-//            document.addEventListener('long-press', function(e) {
-//              e.target.setAttribute('data-editing', 'true');
-//            });
-//
             function delay() {
                 setTimeout( function() { window.location = 'https://inboxpraveen.github.io' }, 10 );
             }
-            
             var node = document.getElementById("button_check");
-var longpress = false;
-var presstimer = null;
-var longtarget = null;
+            var longpress = false;
+            var presstimer = null;
+            var longtarget = null;
+            var cancel = function(e) {
+                if (presstimer !== null) {
+                    clearTimeout(presstimer);
+                    presstimer = null;
+                }
+                this.classList.remove("longpress");
+            };
+            var click = function(e) {
+                if (presstimer !== null) {
+                    clearTimeout(presstimer);
+                    presstimer = null;
+                }
+                this.classList.remove("longpress");
+                if (longpress) {
+                    return false;
+                }
+                alert("Press for little longer please!");
+            };
+            var start = function(e) {
+                console.log(e);
 
-var cancel = function(e) {
-    if (presstimer !== null) {
-        clearTimeout(presstimer);
-        presstimer = null;
-    }
+                if (e.type === "click" && e.button !== 0) {
+                    return;
+                }
+                longpress = false;
+                this.classList.add("longpress");
 
-    this.classList.remove("longpress");
-};
-
-var click = function(e) {
-    if (presstimer !== null) {
-        clearTimeout(presstimer);
-        presstimer = null;
-    }
-
-    this.classList.remove("longpress");
-
-    if (longpress) {
-        return false;
-    }
-
-    alert("press");
-};
-
-var start = function(e) {
-    console.log(e);
-
-    if (e.type === "click" && e.button !== 0) {
-        return;
-    }
-
-    longpress = false;
-
-    this.classList.add("longpress");
-
-    if (presstimer === null) {
-        presstimer = setTimeout(function() {
-            delay();
-            longpress = true;
-        }, 1000);
-    }
-
-    return false;
-};
-
-node.addEventListener("mousedown", start);
-node.addEventListener("touchstart", start);
-node.addEventListener("click", click);
-node.addEventListener("mouseout", cancel);
-node.addEventListener("touchend", cancel);
-node.addEventListener("touchleave", cancel);
-node.addEventListener("touchcancel", cancel);
+                if (presstimer === null) {
+                    presstimer = setTimeout(function() {
+                        delay();
+                        longpress = true;
+                    }, 1000);
+                }
+                return false;
+            };
+            node.addEventListener("mousedown", start);
+            node.addEventListener("touchstart", start);
+            node.addEventListener("click", click);
+            node.addEventListener("mouseout", cancel);
+            node.addEventListener("touchend", cancel);
+            node.addEventListener("touchleave", cancel);
+            node.addEventListener("touchcancel", cancel);
         </script>
     </body>
 </html>
