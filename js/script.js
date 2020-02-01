@@ -179,6 +179,6 @@ window.onload = function() {
   document.body.appendChild(css);
 };
 
-//$(window).load(function() {
-//    $(".loader").fadeOut("slow");
-//});
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+});

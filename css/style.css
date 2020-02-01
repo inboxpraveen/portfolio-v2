@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Shadows+Into+Light|Cedarville+Cursive');
 
-/*
 .loader {
     position: fixed;
     left: 0px;
@@ -11,7 +10,6 @@
     background: url('../images/loading.gif') 50% 50% repeat rgb(0,0,0,0);
     opacity: 1;
 }
-*/
 
 html {
   box-sizing: border-box;
