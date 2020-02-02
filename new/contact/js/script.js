@@ -48,13 +48,13 @@ function setup() {
 function reset() {
   w = canvas.width = window.innerWidth;
   h = canvas.height = window.innerHeight;
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "#4D4D4D";
   setupHexagons();
 }
 
 function setupHexagons() {
   hexagons = [];
-  let r = 200;
+  let r = 100;
   let R = r / Math.cos(Math.PI / 6);
   let t = r * 2 / Math.sqrt(3);
   let rows = w / (r * 2) + 1;
