@@ -283,9 +283,9 @@ ul {
   position:relative;
     left: 50%;
   transform:translate(-50%, -50%);
-  display:inline-block;
-  margin-top:20vh;
-  padding:10px;
+  display:inline-grid;
+  margin:0px auto;
+  padding:1px;
 }
 
 ul li {
