@@ -1,12 +1,15 @@
 canvas {
     display: block;
 }
-body{
-    margin: 0px auto;
-}
 
 body{
     overflow-x: hidden;
+      text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 .container {
   width: 100%;
@@ -206,4 +209,67 @@ body{
 ::-webkit-scrollbar-thumb {
   background: black; 
   border-radius: 2px;
+}
+
+.nav {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  position: relative;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+    margin-top: -10vh;
+  border-radius: 40px;
+}
+
+.nav-item {
+  color: #83818c;
+  padding: 20px;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 999999;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+.nav-item:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #dfe2ea;
+  border-radius: 8px 8px 0 0;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-item:not(.is-active):hover:before {
+  opacity: 1;
+  bottom: 0;
+}
+
+.nav-item:not(.is-active):hover {
+  color: #333;
+}
+
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  -webkit-transition: .4s;
+  transition: 1s;
+  height: 5px;
+  z-index: 9999999;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 580px) {
+  .nav {
+    overflow: auto;
+  }
 }
