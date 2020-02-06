@@ -67,18 +67,18 @@ body, .wrap {
           transform-origin: 100% 50%;
   opacity: 0.5;
 }
-.back__slide:nth-child(1):before {
+.back__slide:nth-child(odd):before {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jelly-back-back.png");
   opacity: 0.1;
 }
-.back__slide:nth-child(2):before {
+.back__slide:nth-child(even):before {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/mountain-back-crop2.png");
   opacity: 0.2;
   background-repeat: no-repeat;
   background-size: 101% auto;
   background-position: right calc(50% - 14rem);
 }
-.back__slide:nth-child(2) .back-front-image {
+.back__slide:nth-child(even) .back-front-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -97,7 +97,7 @@ body, .wrap {
   transition: transform 600ms 300ms linear, opacity 300ms 500ms linear;
   transition: transform 600ms 300ms linear, opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
 }
-.back__slide:nth-child(2) .back-front-image:after {
+.back__slide:nth-child(even) .back-front-image:after {
   content: '';
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
   background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
@@ -108,7 +108,7 @@ body, .wrap {
   height: 20.5rem;
   width: 100%;
 }
-.back__slide:nth-child(2).active .back-front-image {
+.back__slide:nth-child(even).active .back-front-image {
   opacity: 0.2;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -125,8 +125,8 @@ body, .wrap {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
-  width: 90rem;
-  height: 50rem;
+  width: 95vw;
+  height: 95vh;
   background: #000000;
 }
 .card__slide {
@@ -257,7 +257,7 @@ body, .wrap {
   transition: transform 600ms 700ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 700ms linear;
   transition: transform 600ms 700ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 700ms linear, -webkit-transform 600ms 700ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.card__slide:nth-child(1) .image {
+.card__slide:nth-child(odd) .image {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jelly.png");
   background-size: 150% auto;
   background-position: center;
@@ -272,7 +272,7 @@ body, .wrap {
   z-index: 2;
   opacity: 0;
 }
-.card__slide:nth-child(1).active .image {
+.card__slide:nth-child(odd).active .image {
   opacity: 1;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
@@ -281,7 +281,7 @@ body, .wrap {
   transition: transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 1000ms linear;
   transition: transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 1000ms linear, -webkit-transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.card__slide:nth-child(1).exit .image {
+.card__slide:nth-child(odd).exit .image {
   -webkit-transform: translate3d(-45%, -60%, 0);
           transform: translate3d(-45%, -60%, 0);
   -webkit-transition: opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
@@ -289,7 +289,7 @@ body, .wrap {
   transition: transform 600ms 300ms linear, opacity 300ms 500ms linear;
   transition: transform 600ms 300ms linear, opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
 }
-.card__slide:nth-child(1):after {
+.card__slide:nth-child(odd):after {
   content: '';
   position: absolute;
   top: 0;
@@ -303,10 +303,10 @@ body, .wrap {
   -webkit-filter: contrast(150%);
           filter: contrast(150%);
 }
-.card__slide:nth-child(2) {
+.card__slide:nth-child(even) {
   overflow: hidden;
 }
-.card__slide:nth-child(2) .image {
+.card__slide:nth-child(even) .image {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/mountain-front-crop.png");
   background-size: 100% auto;
   background-position: 50% top;
@@ -327,7 +327,7 @@ body, .wrap {
   transition: transform 600ms 300ms linear, opacity 300ms 500ms linear;
   transition: transform 600ms 300ms linear, opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
 }
-.card__slide:nth-child(2) .back-image {
+.card__slide:nth-child(even) .back-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -346,7 +346,7 @@ body, .wrap {
   transition: transform 600ms 300ms linear, opacity 300ms 500ms linear;
   transition: transform 600ms 300ms linear, opacity 300ms 500ms linear, -webkit-transform 600ms 300ms linear;
 }
-.card__slide:nth-child(2) .back-image:after {
+.card__slide:nth-child(even) .back-image:after {
   content: '';
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff));
   background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 100%);
@@ -358,7 +358,7 @@ body, .wrap {
   height: 50%;
   top: 50%;
 }
-.card__slide:nth-child(2).active .image {
+.card__slide:nth-child(even).active .image {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -367,7 +367,7 @@ body, .wrap {
   transition: transform 1200ms 1300ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 1300ms linear;
   transition: transform 1200ms 1300ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 1300ms linear, -webkit-transform 1200ms 1300ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.card__slide:nth-child(2).active .back-image {
+.card__slide:nth-child(even).active .back-image {
   opacity: 1;
   -webkit-transform: translatey(-2rem);
           transform: translatey(-2rem);
@@ -376,7 +376,7 @@ body, .wrap {
   transition: transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 1000ms linear;
   transition: transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 1000ms linear, -webkit-transform 1200ms 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.card__slide:nth-child(2).exit .back-image {
+.card__slide:nth-child(even).exit .back-image {
   -webkit-transform: translatey(-4rem);
           transform: translatey(-4rem);
 }
@@ -575,7 +575,7 @@ body, .wrap {
   -webkit-transition-delay: 1000ms;
           transition-delay: 1000ms;
 }
-.content__slide.active .title__line:nth-child(2):before {
+.content__slide.active .title__line:nth-child(even):before {
   -webkit-transition-delay: 1200ms;
           transition-delay: 1200ms;
 }
@@ -763,7 +763,7 @@ body, .wrap {
   height: 2rem;
   z-index: -1;
 }
-.title__line:nth-child(2):before {
+.title__line:nth-child(even):before {
   -webkit-transition-delay: 200ms;
           transition-delay: 200ms;
 }
