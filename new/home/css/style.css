@@ -197,20 +197,24 @@ body{
 
 .links{
     position: absolute;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    background: #E0E5EC;
     margin-top: -50vh;
+    border-radius: 100px;
     text-align: center;
     display: inline-block;
 }
 .links a{
     min-width: 9vh;
-    background: #3E3E3E;
+    background: #E0E5EC;
     margin: 2%;
-    color: white;
+    color: black;
     font-weight: 700;
     font-family: monospace;
     font-size: 20px;
     text-align: center;
+    box-shadow: 4px 4px 7px rgb(163,177,198,0.6), -4px -4px 7px  rgba(255,255,255, 0.5);
 }
 
 
@@ -226,7 +230,7 @@ body{
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-1px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
