@@ -102,14 +102,14 @@ text-shadow: 2px 2px 2px black;
 }
 .product_inner a {
   border: 2px solid rgba(255, 255, 255, 0.5);
-  color: #FFF;
+  color: black;
   border-radius: 5px;
     text-decoration: none;
   padding: 1em 3em;
     box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
     margin: 2%;
   margin: 1em 0 0 0;
-    text-shadow: 2px 2px 2px black;
+/*    text-shadow: 2px 2px 2px black;*/
   background: transparent;
   cursor: pointer;
   -webkit-transition: background ease-in .25s;
@@ -117,7 +117,7 @@ text-shadow: 2px 2px 2px black;
 }
 .product_inner a:hover {
   background: white;
-  color: white;
+  color: #421311;
 }
 
 .product_inner a:hover:before {
